@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "knex": "^0.15.2",
     "postgresql": "0.0.1"
   }
 }
