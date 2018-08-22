@@ -12,6 +12,7 @@ var knex = require('knex')({
         port: settings.port
     }
 });
+
 var query = process.argv.slice(2);
 
 const insertPeople = function (query) {
@@ -29,6 +30,5 @@ const insertPeople = function (query) {
     });
 
 }
-
 
 insertPeople(query);

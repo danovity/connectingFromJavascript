@@ -19,7 +19,7 @@ const getPeople = function (query, callback) {
         }
 
         client.query(
-            `SELECT * FROM famous_people WHERE first_name = $1::text;`, [query]).then((result) => {
+            `SELECT * FROM famous_people WHERE first_name = $1::text`, [query]).then((result) => {
 
             final = callback(result.rows);
 

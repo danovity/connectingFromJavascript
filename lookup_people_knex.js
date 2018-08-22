@@ -15,7 +15,9 @@ var query = process.argv.slice(2)[0];
 const getPeople = function (query, callback) {
     knex.select('*')
         .from('famous_people')
-        .where('first_name', '=', query)
+        .where({
+            first_name: query
+        })
         .then(function (result) {
             console.log(result);
             callback(result);
